@@ -30,14 +30,14 @@ const Table: React.FC<TableProps> = ({ data, onEdit }) => {
               <td>
                 {('name' in item && item.name) || ('description' in item && item.description) || ('title' in item && item.title)}
               </td>
-              <td>{item.active ? 'Yes' : 'No'}</td>
+              <td>{item.active ? 'Active' : 'No active'}</td>
               <td>
                 {('createdAt' in item && item.createdAt && formatDate(item.createdAt)) || 
                 ('updatedAt' in item && item.updatedAt && formatDate(item.updatedAt)) || 
                 ('publishedAt' in item && item.publishedAt && formatDate(item.publishedAt))}
               </td>
               <td>
-                <button onClick={() => onEdit(item)}>Edit</button>
+                <button className="edit-button" onClick={() => onEdit(item)}>Edit</button>
               </td>
             </tr>
           ))}
