@@ -10,9 +10,24 @@
     align-items: center;
   }
 
+  .app {
+    display: flex;
+    flex-direction: column; 
+    height: 100vh; 
+    justify-content: flex-start; 
+    align-items: center; 
+  }
+  
   .save-button {
     display: block;
     margin: 0 auto;
+    background-color: lightblue; 
+    color: #000000; 
+    border: none; 
+    font-size: 0.9rem; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
   }
   
   .modal {
@@ -72,3 +87,67 @@
   .table th {
     text-align: left;
   }
+
+   /* style header */
+   .filter-header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: lightblue; 
+    padding: 10px; 
+    border-radius: 5px; 
+  }
+  
+  .filter-header input[type="text"] {
+    padding: 8px;
+    margin-right: 10px;
+    width: 200px;
+  }
+  
+  .filter-header div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-header input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  
+.filter-header input[type="text"],
+.filter-header select {
+  margin-left: 10px; 
+  padding: 5px; 
+}
+
+
+.filter-header button {
+  margin-left: 10px; 
+  padding: 5px 10px; 
+  background-color: #007bff; 
+  color: white;
+  border: none; 
+  border-radius: 3px; 
+  cursor: pointer; 
+}
+
+.filter-header button:hover {
+  background-color: #0056b3;
+}
+
+/* button edit */
+
+.edit-button {
+  background-color: lightblue; 
+  color: #000000; 
+  border: none; 
+  padding: 5px 10px;
+  margin: 5px; 
+  font-size: 0.9rem; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s; 
+}
+
+.edit-button:hover {
+  background-color: #82b1ff; 
+}

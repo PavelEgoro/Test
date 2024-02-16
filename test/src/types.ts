@@ -5,6 +5,7 @@ export type Item = Product | PricePlan | Page;
     name: string;
     active: boolean;
     createdAt: string;
+    type: 'Product';
   }
   
   export interface PricePlan {
@@ -13,6 +14,7 @@ export type Item = Product | PricePlan | Page;
     active: boolean;
     createdAt: string;
     removedAt?: string;
+    type: 'PricePlan'
   }
   
   export interface Page {
@@ -21,9 +23,9 @@ export type Item = Product | PricePlan | Page;
     active: boolean;
     updatedAt: string;
     publishedAt: string;
+    type: 'Page';
   }
   
-  // Интерфейс для структуры вашего data.json
   export interface Data {
     products: Product[];
     pricePlans: PricePlan[];
